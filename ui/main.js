@@ -28,17 +28,6 @@ button.onclick = function(){
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 //old code
 
 /*console.log('Loaded!');
