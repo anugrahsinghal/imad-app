@@ -105,7 +105,7 @@ app.get('/counter' , function(req,res){
 });
 
 var comments=[];
-app.get('/submit-comment' , function(req,res){  //URL: /submit-name?name=xxxxxx
+app.get('/:articlename/submit-comment' , function(req,res){  //URL: /submit-name?name=xxxxxx
    //Get name from request
    var comment = req.query.comment; //TODO
    
