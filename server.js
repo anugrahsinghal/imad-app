@@ -124,9 +124,15 @@ app.get('/submit-name' , function(req,res){  //URL: /submit-name?name=xxxxxx
    res.send(JSON.stringify(names));
 });
 
+var comments=[];
 app.get('/:articleName',function(req,res){
    var articleName = req.params.articleName;
    res.send(createTemplate(articles[articleName]));
+    var comment = req.query.comment; //TODO
+   
+   comments.push(comment);
+   //JSON : JAVASCRIPT OBJECT NOTATION
+   res.send(JSON.stringify(comments));
 });
 
 app.get('/ui/style.css', function (req, res) {
