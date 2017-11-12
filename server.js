@@ -80,11 +80,13 @@ function createTemplate(data) {
         <form>
             <div>
                 <textarea name='comments' placeholder='hey say' id='comments' style='font-family:sans:serif;font-size:1.2em;'></textarea>
-            </div>
-            <input type='submit' value='submit' id='submit_cmnt'></input>
-        </form>
-        <ul id='commentList'>
+                 <input type='submit' value='submit' id='submit_cmnt'></input>
+                <ul id='commentList'>
             </ul>
+            </div>
+           
+        </form>
+        
         </div>
         <script type="text/javascript" src="/ui/main.js"></script>
     </body>
