@@ -23,6 +23,8 @@ var articles = {
                         This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.
                         This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.
                     </p>`
+                    
+                    
     },
     'article-two' : {
         title: 'Article Two | Anugrah Singhal',
@@ -74,6 +76,13 @@ function createTemplate(data) {
                 <div>
                     ${content}
                 </div>
+                 <hr/>
+        <form action='/html/tags/html_from_tag_action.cfm' method='post'>
+            <div>
+                <textarea name='comments' placeholder='hey say' id='comments' stylw='font-family:sans:serif;font-size:1.2em;'></textarea>
+            </div>
+            <input type='submit' value='submit' id='submit_cmnt'></input>
+        </form>
         </div>
     </body>
     </html>
