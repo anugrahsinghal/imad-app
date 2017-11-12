@@ -104,15 +104,15 @@ app.get('/counter' , function(req,res){
    res.send(counter.toString());
 });
 
-/*var comments=[];
-app.get('/:articlename/submit-comment' , function(req,res){  //URL: /submit-name?name=xxxxxx
+var comments=[];
+app.get('/:articlename?comment' , function(req,res){  //URL: /submit-name?name=xxxxxx
    //Get name from request
    var comment = req.query.comment; //TODO
    
    comments.push(comment);
    //JSON : JAVASCRIPT OBJECT NOTATION
    res.send(JSON.stringify(comments));
-});*/
+});
 
 var comments=[];
 app.get('/:articleName',function(req,res){
