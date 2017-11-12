@@ -77,16 +77,16 @@ function createTemplate(data) {
                     ${content}
                 </div>
                  <hr/>
+                 <div>
         <form>
-            <div>
+            <div class='footer'>
                 <textarea name='comments' placeholder='hey say' id='comments' style='font-family:sans:serif;font-size:1.2em;'></textarea>
                  <input type='submit' value='submit' id='submit_cmnt'></input>
-                <ul id='commentList'>
+            <ul id='commentList'>
             </ul>
             </div>
-           
         </form>
-        
+        </div>
         </div>
         <script type="text/javascript" src="/ui/main.js"></script>
     </body>
