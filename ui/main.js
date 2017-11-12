@@ -62,6 +62,41 @@ submit.onclick = function() {
   
 };
 
+var submit1 = document.getElementById('submit_cmnt');
+submit1.onclick = function() {
+    
+    
+    //Create a requets object
+  var request = new XMLHttpRequest();
+  //capture the response and store it in a variable
+  request.onreadystatechange = function(){
+    if(request.readyState === XMLHttpRequest.DONE) {
+        //take some action
+        if(request.status === 200)
+        {
+            //capture list of names sna render as a list
+              var comments=request.responseText;
+              comments = JSON.parse(comments);
+              var list = '';
+              for(var i=0;i<comments.length;i++){
+                  list += '<li>' + comments[i] + '</li>';
+              }
+              var ul = document.getElementById('commentList');
+              ul.innerHTML=list;
+        }
+    } 
+    //not done yet
+  };
+  
+          //Make the request
+        var commentInput = document.getElementById('comment');
+        var comment = commentInput.value;
+  request.open('GET', 'http://anugrahsinghal1.imad.hasura-app.io/submit-comment?comment=' + comment, true);
+  request.send(null);
+  //make request f=to server and send name
+  
+};
+
 
 
 
