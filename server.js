@@ -79,7 +79,7 @@ function createTemplate(data) {
                  <hr/>
         <form>
             <div>
-                <textarea name='comments' placeholder='hey say' id='comments' stylw='font-family:sans:serif;font-size:1.2em;'></textarea>
+                <textarea name='comments' placeholder='hey say' id='comments' style='font-family:sans:serif;font-size:1.2em;'></textarea>
             </div>
             <input type='submit' value='submit' id='submit_cmnt'></input>
         </form>
