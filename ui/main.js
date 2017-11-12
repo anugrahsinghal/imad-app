@@ -77,12 +77,12 @@ submit1.onclick = function() {
             //capture list of names sna render as a list
               var comments=request.responseText;
               comments = JSON.parse(comments);
-              var list = '';
+              var cmntlist = '';
               for(var i=0;i<comments.length;i++){
-                  list += '<li>' + comments[i] + '</li>';
+                  cmntlist += '<li>' + comments[i] + '</li>';
               }
               var ul = document.getElementById('commentList');
-              ul.innerHTML=list;
+              ul.innerHTML=cmntlist;
         }
     } 
     //not done yet
