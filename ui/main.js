@@ -91,7 +91,7 @@ submit1.onclick = function() {
           //Make the request
         var commentInput = document.getElementById('comment');
         var comment = commentInput.value;
-  request.open('GET', 'http://anugrahsinghal1.imad.hasura-app.io/:articlename?comment=' + comment, true);
+  request.open('GET', 'http://anugrahsinghal1.imad.hasura-app.io/:articlename/submit-comment?comment=' + comment, true);
   request.send(null);
   //make request f=to server and send name
   
