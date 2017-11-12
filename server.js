@@ -77,13 +77,16 @@ function createTemplate(data) {
                     ${content}
                 </div>
                  <hr/>
-        <form action='/html/tags/html_from_tag_action.cfm' method='post'>
+        <form>
             <div>
                 <textarea name='comments' placeholder='hey say' id='comments' stylw='font-family:sans:serif;font-size:1.2em;'></textarea>
             </div>
             <input type='submit' value='submit' id='submit_cmnt'></input>
         </form>
+        <ul id='commentList'>
+            </ul>
         </div>
+        
     </body>
     </html>
     `;
@@ -97,6 +100,16 @@ var counter=0;
 app.get('/counter' , function(req,res){
    counter = counter + 1;
    res.send(counter.toString());
+});
+
+var comments=[];
+app.get('/submit-comment' , function(req,res){  //URL: /submit-name?name=xxxxxx
+   //Get name from request
+   var comment = req.query.comment; //TODO
+   
+   comments.push(comment);
+   //JSON : JAVASCRIPT OBJECT NOTATION
+   res.send(JSON.stringify(comments));
 });
 
 var names=[];
