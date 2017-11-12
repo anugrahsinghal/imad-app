@@ -104,7 +104,7 @@ app.get('/counter' , function(req,res){
    res.send(counter.toString());
 });
 
-var comments=[];
+/*var comments=[];
 app.get('/:articlename/submit-comment' , function(req,res){  //URL: /submit-name?name=xxxxxx
    //Get name from request
    var comment = req.query.comment; //TODO
@@ -112,6 +112,17 @@ app.get('/:articlename/submit-comment' , function(req,res){  //URL: /submit-name
    comments.push(comment);
    //JSON : JAVASCRIPT OBJECT NOTATION
    res.send(JSON.stringify(comments));
+});*/
+
+var comments=[];
+app.get('/:articleName',function(req,res){
+   var articleName = req.params.articleName;
+   res.send(createTemplate(articles[articleName]));
+   
+   comments.push(comment);
+   //JSON : JAVASCRIPT OBJECT NOTATION
+   res.send(JSON.stringify(comments));
+    
 });
 
 var names=[];
@@ -122,17 +133,6 @@ app.get('/submit-name' , function(req,res){  //URL: /submit-name?name=xxxxxx
    names.push(name);
    //JSON : JAVASCRIPT OBJECT NOTATION
    res.send(JSON.stringify(names));
-});
-
-var comments=[];
-app.get('/:articleName',function(req,res){
-   var articleName = req.params.articleName;
-   res.send(createTemplate(articles[articleName]));
-    var comment = req.query.comment; //TODO
-   
-   comments.push(comment);
-   //JSON : JAVASCRIPT OBJECT NOTATION
-   res.send(JSON.stringify(comments));
 });
 
 app.get('/ui/style.css', function (req, res) {
